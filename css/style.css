@@ -436,7 +436,6 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: inherit;
-  background-color: indianred;
 }
 .footer__wrap {
   display: flex;
@@ -448,7 +447,6 @@ img {
 }
 .footer__inst, .footer__telephone, .footer__adress {
   width: 244px;
-  background-color: lawngreen;
 }
 .footer__inst li, .footer__telephone li, .footer__adress li {
   font-weight: 300;

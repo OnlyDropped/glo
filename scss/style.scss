@@ -95,7 +95,6 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: inherit;
-  background-color: indianred;
   &__wrap {
     display: flex;
     justify-content: space-around;
@@ -108,7 +107,6 @@ img {
   &__telephone,
   &__adress {
     width: 244px;
-    background-color: lawngreen;
     li {
       font-weight: 300;
       font-size: 14px;
