@@ -881,4 +881,122 @@ body {
     padding: 114px 0 48px;
   }
 }
+
+@media (max-width: 375px) {
+  .header {
+    padding: 22px 0 11px;
+  }
+  .header__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__telephone {
+    margin-bottom: 10px;
+  }
+  .header__telephone-text span {
+    font-size: 14px;
+  }
+  .header__inst {
+    display: none;
+  }
+  .main-display {
+    padding: 26px 0 40px;
+    background-size: contain;
+  }
+  .main-display__top {
+    margin-bottom: 15px;
+  }
+  .main-display__logo {
+    margin: 0 auto;
+  }
+  .main-display__header {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .main-display__content {
+    padding-top: 23px;
+    background-image: none;
+  }
+  .main-display__info-title {
+    font-size: 25px;
+    line-height: 25px;
+    text-align: center;
+    width: 295px;
+    margin: 0 auto 8px;
+  }
+  .main-display__info-subtitle {
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+  }
+  .main-display__info-link {
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 9px auto 0px;
+  }
+  .what {
+    padding: 13px 0 103px;
+  }
+  .what__title {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 55px;
+  }
+  .what__card {
+    width: 264px;
+  }
+  .what__images {
+    width: 264px;
+    height: 150px;
+  }
+  .what__images img {
+    width: 264px;
+    height: 150px;
+  }
+  .reviews {
+    padding: 85px 0 55px;
+  }
+  .reviews .reviews-slider__item {
+    width: 267px;
+    padding: 0 30px 27px;
+  }
+  .reviews .reviews-slider__text {
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .reviews .reviews-slider .slick-slide.slick-center {
+    opacity: 1;
+    margin: 0 5px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: translateY(-15px);
+            transform: translateY(-15px);
+  }
+  .reviews .reviews-slider .slick-slide.slick-center .reviews-slider__text {
+    color: #000;
+    font-size: 12px;
+    line-height: 26px;
+  }
+  .footer {
+    padding: 61px 0 50px;
+  }
+  .footer__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+    row-gap: 15px;
+  }
+  .footer__inst-img {
+    margin: 0 auto;
+  }
+}
 /*# sourceMappingURL=style.css.map */

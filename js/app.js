@@ -20,12 +20,13 @@ $('.reviews-slider').slick({
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 376,
       settings: {
         arrows: false,
         centerMode: true,
-        centerPadding: '10px',
+        centerPadding: '0px',
         slidesToShow: 1
+        
       }
     }
   ]

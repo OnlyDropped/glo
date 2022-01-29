@@ -84,7 +84,116 @@
       }
     }
   }
-  .footer{
+  .footer {
     padding: 114px 0 48px;
+  }
+}
+@media (max-width: 375px) {
+  .header {
+    padding: 22px 0 11px;
+    &__wrap {
+      flex-direction: column;
+    }
+    &__telephone {
+      margin-bottom: 10px;
+    }
+    &__telephone-text {
+      span {
+        font-size: 14px;
+      }
+    }
+    &__inst {
+      display: none;
+    }
+  }
+  .main-display {
+    padding: 26px 0 40px;
+    background-size: contain;
+    &__top {
+      margin-bottom: 15px;
+    }
+    &__logo {
+      margin: 0 auto;
+    }
+    &__header {
+      font-size: 18px;
+      line-height: 21px;
+    }
+    &__content {
+      padding-top: 23px;
+      background-image: none;
+    }
+    &__info-title {
+      font-size: 25px;
+      line-height: 25px;
+      text-align: center;
+      width: 295px;
+      margin: 0 auto 8px;
+    }
+    &__info-subtitle {
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+    }
+    &__info-link {
+      display: block;
+      width: fit-content;
+      margin: 9px auto 0px;
+    }
+  }
+  .what {
+    padding: 13px 0 103px;
+    &__title {
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 55px;
+    }
+    &__card {
+      width: 264px;
+    }
+    &__images {
+      width: 264px;
+      height: 150px;
+      img {
+        width: 264px;
+        height: 150px;
+      }
+    }
+  }
+  .reviews {
+    padding: 85px 0 55px;
+    .reviews-slider {
+      &__item {
+        width: 267px;
+        padding: 0 30px 27px;
+      }
+      &__text {
+        font-size: 12px;
+        line-height: 14px;
+      }
+      .slick-slide.slick-center {
+        opacity: 1;
+        margin: 0 5px;
+        transform: scale(1);
+        transform: translateY(-15px);
+        .reviews-slider__text {
+          color: #000;
+          font-size: 12px;
+          line-height: 26px;
+        }
+      }
+    }
+  }
+  .footer{
+    padding: 61px 0 50px;
+    &__wrap{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      row-gap: 15px;
+    }
+    &__inst-img{
+      margin: 0 auto;
+    }
   }
 }
