@@ -45,7 +45,8 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -189,9 +190,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -199,9 +200,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -210,9 +211,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -230,7 +231,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -262,9 +264,10 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box;
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -273,8 +276,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -282,7 +285,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -292,7 +295,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -356,15 +359,13 @@ body {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .container {
@@ -378,47 +379,75 @@ img {
   padding-top: 2.3rem;
   padding-bottom: 2.6rem;
 }
+
 .header__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .header__telephone {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .header__inst {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .header__inst span {
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   margin-left: 15px;
 }
+
 .header__maps {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .header__maps span {
   font-weight: 500;
   font-size: 15px;
   line-height: 16px;
   margin-left: 8px;
 }
+
 .header__telephone-img {
   width: 2rem;
   height: 2rem;
 }
+
 .header__maps-img {
   width: 1.5rem;
   height: 2.5rem;
 }
+
 .header__inst-img {
   width: 3rem;
   height: 3rem;
 }
+
 .header__telephone-text span {
   margin: 0 12px;
   font-weight: 500;
@@ -427,7 +456,285 @@ img {
 }
 
 .main {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.what {
+  padding: 12px 0 225px;
+  background-image: url("../img/card/bg.svg");
+  background-repeat: no-repeat;
+  background-position-x: left;
+  background-position-y: bottom;
+}
+
+.what__title {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 59px;
+  text-align: center;
+  color: #000;
+  margin-bottom: 120px;
+}
+
+.what__span {
+  background: -webkit-gradient(linear, left top, left bottom, from(#b90160), to(#3d5bf5));
+  background: linear-gradient(180deg, #b90160 0%, #3d5bf5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.what__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.what__card {
+  width: 344px;
+  background: #ffffff;
+  border-radius: 9px;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+.what__images {
+  width: 344px;
+  height: 207px;
+}
+
+.what__images-img {
+  width: 344px;
+  height: 207px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.what__info {
+  padding: 22px 40px 30px 22px;
+}
+
+.what__info-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000;
+  margin: 0;
+}
+
+.what__info-text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #767676;
+}
+
+.main-display {
+  padding: 47px 0 12px;
+  background-image: url("../img/main-info.svg");
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: left;
+}
+
+.main-display__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main-display__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-display__logo-img {
+  width: 10rem;
+  height: 6rem;
+  margin-right: 11px;
+}
+
+.main-display__header {
+  font-style: italic;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  color: #000;
+}
+
+.main-display__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-display__item + .main-display__item {
+  margin-left: 25px;
+}
+
+.main-display__item {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #737373;
+}
+
+.main-display__content {
+  padding: 189px 0 220px;
+  background-image: url("../img/main-content.jpg");
+  background-repeat: no-repeat;
+  background-position-x: right;
+}
+
+.main-display__info {
+  max-width: 676px;
+}
+
+.main-display__info-title {
+  font-weight: 900;
+  font-size: 50px;
+  line-height: 59px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.main-display__info-subtitle {
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000;
+}
+
+.main-display__info-link {
+  background: linear-gradient(95.2deg, #b90160 2.23%, #2e3192 99.51%);
+  border-radius: 7px;
+  padding: 15px 38px;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 23px;
+  color: #fff;
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.reviews {
+  background: linear-gradient(94.31deg, rgba(212, 20, 90, 0.25) 0.96%, rgba(46, 49, 146, 0.25) 104.83%);
+  padding: 98px 0 72px;
+  overflow: hidden;
+}
+
+.reviews-slider__item {
+  width: 536px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+  border-radius: 9px;
+  padding: 0px 47px 50px 44px;
+}
+
+.reviews-slider__images {
+  text-align: center;
+  -webkit-filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.25));
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -46px;
+}
+
+.reviews-slider__info {
+  margin-top: 17px;
+}
+
+.reviews-slider__text {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000;
+  text-align: center;
+}
+
+.reviews-slider__name {
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 15px;
+  text-align: center;
+  color: #8e8e8e;
+  padding-top: 15px;
+  position: relative;
+  width: 130px;
+  margin: 0 auto;
+}
+
+.reviews-slider__name::before {
+  position: absolute;
+  content: "";
+  width: 130px;
+  height: 1px;
+  top: 0px;
+  left: 0;
+  background: linear-gradient(90.14deg, #d4145a 3.35%, #3d5bf5 91.43%);
+}
+
+.slick-slide.slick-center {
+  opacity: 1;
+  margin: 0 70px;
+}
+
+.slick-slide.slick-center .reviews-slider__text {
+  color: tomato;
+}
+
+.slick-slide {
+  opacity: 0.4;
+}
+
+.slick-list {
+  overflow: inherit;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  padding: 0;
+  border: none;
+  font-size: 20px;
+  padding: 5px 10px;
+  background: violet;
+  cursor: pointer;
+}
+
+.slick-arrow.slick-prev {
+  left: 0;
+  z-index: 1;
+}
+
+.slick-arrow.slick-next {
+  right: 0;
+  z-index: 1;
 }
 
 .footer {
@@ -437,17 +744,24 @@ img {
   background-repeat: no-repeat;
   background-size: inherit;
 }
+
 .footer__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
+
 .footer__inst-img {
   width: 3.3rem;
   height: 3.3rem;
 }
+
 .footer__inst, .footer__telephone, .footer__adress {
   width: 244px;
 }
+
 .footer__inst li, .footer__telephone li, .footer__adress li {
   font-weight: 300;
   font-size: 14px;
@@ -455,10 +769,12 @@ img {
   color: #000;
   margin-bottom: 10px;
 }
+
 .footer__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   color: #000;
   margin-bottom: 10px;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
